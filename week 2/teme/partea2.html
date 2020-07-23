@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>week2 part2 ex1</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <!--Ex 1-->
+
+    <form>
+        <label>Nume</label> <br>
+        <input type="text" name="last name" required><br>
+        <label>Prenume</label><br>
+        <input type="text" name="first name" required><br>
+        <label>Sex</label>
+        <select name="sex"><br>
+            <option value="Feminin">F</option>
+            <option value="Masculin">M</option>
+        </select> <br>
+        <label>Varsta</label>
+        <input type="number" value="number" min="18" max="85"><br>
+        <label>Tara</label><br>
+        <select name="Tara">
+            <option value="Romania"></option>
+            <option value="Uk">UK</option>
+            <option selected value="Franta">Franta</option>
+            <option value="Portugalia">Portugalia</option>
+            <option value="Austria">Austria</option>
+        </select><br>
+        <label> Oras</label><br>
+        <select name="orase">
+            <option value="Bucuresti">Bucuresti</option>
+            <option value="Iasi">Iasi</option>
+            <option value="Londra">Londra</option>
+            <option value="Porto">Porto</option>
+            <option value="Porto">Lisabona</option>
+            <option value="Viena">Viena</option>
+            <option value="Paris" selected>Paris</option>
+            <option value="Salzburg">Salzburg</option>
+        </select><br>
+        <label>Adresa</label><br>
+        <input type="text" name="adresa"><br>
+        <label>Cod postal</label><br>
+        <input type="number" name="cod postal" placeholder="75003"><br>
+        <label>Email</label><br>
+        <input type="email" name="email" required><br>
+        <label>Mesaj</label><br>
+        <textarea name="mesaj" cols="30" rows="10"></textarea> <br>
+        <label> Upload CV: </label>
+        <input type="file" name="Cv"><br><br>
+        <input type="submit" , value="Submit">
+        <input type="reset" , value="Reset">
+    </form>
+
+    <br>
+    <hr>
+
+    <!--Ex2-->
+
+    <form>
+        <h2><b>Travel reservation form </b> </h2>
+        <h3>*denotes mandatory</h3> <br><br>
+        <label>Full name*:</label><br>
+        <input type="text" placeholder="Firstname LastName"><br>
+        <label>Email adddress*:</label><br>
+        <input type="email" name="email" placeholder="EMAIL_ADDRESS"><br>
+        <label>Select Tour Package*:</label><br>
+        <select name="tour pachage">
+            <option value="Goa" selected>Goa</option>
+        </select> <br>
+        <label>Arrivel date*:</label><br>
+        <input type="date" name="date" placeholder="m/d/y"> <br>
+        <label>Number of persons*:</label><br>
+        <input type="text" name="number of persons" placeholder="UNKNOWN_TYPE"><br>
+        <label>What would you want to avail?*</label><br>
+        <label>Boarding</label>
+        <input type="checkbox" name="boarding"> <br>
+        <label>Fooding</label>
+        <input type="checkbox" name="fooding" id=""><br>
+        <label>Sight seeing</label>
+        <input type="checkbox" name="sight seeing"> <br>
+        <label>Discount Coupon code: </label> <br>
+        <input type="text" name="dicount" placeholder="UNKNOWN_TYPE"><br>
+        <label>Terms and conditions*</label><br>
+
+        <input type="radio" checked name="radiobutton" value="radio1" />I agree
+        <input type="radio" name="radiobutton" value="radio2" /> I disagre <br> <br>
+
+        <button type="submit">Complete reservation</button>
+        <br><br>
+
+    </form>
+    <hr>
+
+    <!--Ex3-->
+
+    <form>
+        <label>Search for: </label> <br>
+        <input type="search" name="search" value="chocolate cheesecake recipies">
+        <input type="submit" value="Search"><br>
+        <label>Match:</label>
+        <input type="radio" name="radiobutton" value="radio1">Any word
+        <input type="radio" checked name="radiobutton" value="radio2" />All words
+        <input type="radio" name="radiobutton" value="radio3" />Exact phrase <br>
+
+        <input type="checkbox" checked name="sound" style="margin-left: 4%;">
+        <label>Sound-alike matching</label> <br>
+        <label>Dated:</label>
+        <input type="radio" name="radioButton">
+        <select name="text">
+            <option value="1">Within the last year</option>
+        </select><br>
+
+
+        <label style="margin-left: 4%; inline-size: auto;">From:</label>
+        <select>
+            <option type="month" name="1" value="september">September</option>
+
+        </select>
+        <select>
+            <option type="number" value="8">8</option>
+        </select>
+        <label>,</label>
+        <input type="number" value="2009"><br>
+
+        <label style="margin-left: 5.1%; inline-size: auto;">To:</label>
+        <select>
+            <option type="month" name="1" value="september">October</option>
+        </select>
+
+        <select>
+            <option type="number" value="18">18</option>
+        </select>
+        <label>,</label>
+        <input type="number" value="2011"><br>
+
+        <label>Within:</label>
+        <select name="description">
+            <option value="Description">Description</option>
+        </select> <br>
+
+        <label>Show:</label>
+        <select>
+            <option type="number " value="10">10</option>
+        </select>
+        <label>results</label>
+        <select>
+            <option type="text" value="with">with</option>
+        </select>
+
+        <label>summaries</label><br>
+        <label>Sort by:</label>
+        <select>
+            <option>relevance</option>
+        </select>
+        <br>
+    </form>
+    <br> <br>
+    <hr>
+
+    <!--Ex4-->
+
+    <form>
+        <h3><b>My feedback form
+    </form></b></h3>
+    <ul>
+        <li>
+            Name:
+            <input type="text" name="name">
+        </li>
+        <li>Email:
+            <input type="email" name="email">
+        </li>
+        <li>Password:
+            <input type="password" name="password">
+        </li><br>
+        <li>Please check all the emoticons that apply to you:
+            <ul>
+                <li>Angry
+                    <input type="checkbox" checked>
+                </li>
+                <li>Sad
+                    <input type="checkbox">
+                </li>
+                <li>Happy
+                    <input type="checkbox">
+                </li>
+                <li>Ambivalent
+                    <input type="checkbox">
+                </li>
+            </ul>
+        </li>
+        <li>How satisfied were you with our service?
+            <ul>
+                <li>Very satisfied
+                    <input type="radio" checked name="radiob">
+                </li>
+                <li>Satisfied
+                    <input type="radio" name="radiob">
+                </li>
+                <li>Didn't care
+                    <input type="radio" name="radiob">
+                </li>
+                <li>Very dissatisfied
+                    <input type="radio" name="radiob">
+                </li>
+            </ul>
+        </li>
+        <li>Further comments:
+            <textarea id="" cols="30" rows="10"></textarea>
+        </li>
+        <li>Bio photo:
+            <input type="text">
+            <input type="submit" , value="Choose...">
+        </li>
+        <li>Location visited:
+            <select>
+                <option value="Select location">Select location</option>
+            </select>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <input type="submit" value="submit">
+        </li>
+    </ul>
+
+    </form>
+</body>
+
+</html>
