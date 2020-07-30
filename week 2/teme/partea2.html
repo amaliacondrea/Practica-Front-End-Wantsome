@@ -65,30 +65,30 @@
         <h2><b>Travel reservation form </b> </h2>
         <h3>*denotes mandatory</h3> <br><br>
         <label>Full name*:</label><br>
-        <input type="text" placeholder="Firstname LastName"><br>
+        <input type="text" placeholder="Firstname LastName" required><br>
         <label>Email adddress*:</label><br>
-        <input type="email" name="email" placeholder="EMAIL_ADDRESS"><br>
+        <input type="email" name="email" placeholder="EMAIL_ADDRESS" required><br>
         <label>Select Tour Package*:</label><br>
-        <select name="tour pachage">
+        <select name="tour pachage" required>
             <option value="Goa" selected>Goa</option>
         </select> <br>
         <label>Arrivel date*:</label><br>
-        <input type="date" name="date" placeholder="m/d/y"> <br>
+        <input type="date" name="date" placeholder="m/d/y" required> <br>
         <label>Number of persons*:</label><br>
-        <input type="text" name="number of persons" placeholder="UNKNOWN_TYPE"><br>
+        <input type="text" name="number of persons" placeholder="UNKNOWN_TYPE" required><br>
         <label>What would you want to avail?*</label><br>
         <label>Boarding</label>
         <input type="checkbox" name="boarding"> <br>
         <label>Fooding</label>
-        <input type="checkbox" name="fooding" id=""><br>
+        <input type="checkbox" name="fooding"><br>
         <label>Sight seeing</label>
         <input type="checkbox" name="sight seeing"> <br>
         <label>Discount Coupon code: </label> <br>
         <input type="text" name="dicount" placeholder="UNKNOWN_TYPE"><br>
-        <label>Terms and conditions*</label><br>
+        <label >Terms and conditions*</label><br>
 
-        <input type="radio" checked name="radiobutton" value="radio1" />I agree
-        <input type="radio" name="radiobutton" value="radio2" /> I disagre <br> <br>
+        <input type="radio" checked name="radiobutton" value="radio1" required />I agree
+        <input type="radio" name="radiobutton" value="radio2" required/> I disagre <br> <br>
 
         <button type="submit">Complete reservation</button>
         <br><br>
@@ -214,7 +214,7 @@
             <textarea id="" cols="30" rows="10"></textarea>
         </li>
         <li>Bio photo:
-            <input type="text">
+            <input type="file">
             <input type="submit" , value="Choose...">
         </li>
         <li>Location visited:
