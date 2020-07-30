@@ -1,0 +1,35 @@
+form{
+    margin: 100px ;
+    padding: 50px;
+    position: absolute;
+    background-position: center;
+    background-color: rgb(194, 162, 82);
+    max-width: 550px;
+}
+
+h3{
+    text-align: center;
+    font-size: 25px;
+}
+input{
+    background-color: rgb(224, 208, 166);
+}
+textarea{
+    background-color: rgb(224, 208, 166);
+}
+input[value="submit"]{
+    font-size: 15px;
+}
+ li li:hover {
+     background-color: burlywood;
+    transition: color .5s;
+}
+ul:hover{
+    border-radius: 5px;
+}
+.quetions:hover {
+    text-shadow: burlywood;
+    font-size: 18px;
+    text-overflow: clip;
+
+}

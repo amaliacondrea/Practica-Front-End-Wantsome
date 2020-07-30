@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form2</title>
+    <link rel="stylesheet" href="form2.css">
+</head>
+
+<body>
+    <form>
+        <h3><b>My feedback form</b></h3><br>
+
+        <ul>
+            <li class="quetions">
+                Name:
+                <input type="text" name="name"></li>
+            <li class="quetions">Email:
+                <input type="email" name="email">
+            </li>
+            <li class="quetions">Password:
+                <input type="password" name="password">
+            </li><br>
+            <li class="quetions">Please check all the emoticons that apply to you:
+                <ul>
+                    <li>Angry
+                        <input  type="checkbox" checked>
+                    </li>
+                    <li>Sad
+                        <input type="checkbox">
+                    </li>
+                    <li>Happy
+                        <input type="checkbox">
+                    </li>
+                    <li>Ambivalent
+                        <input type="checkbox">
+                    </li>
+                </ul>
+            </li> <br>
+            <li class="quetions"> How satisfied were you with our service?
+                <ul> 
+                    <li>Very satisfied
+                        <input type="radio" checked name="radiob">
+                    </li>
+                    <li>Satisfied
+                        <input type="radio" name="radiob">
+                    </li>
+                    <li>Didn't care
+                        <input type="radio" name="radiob">
+                    </li>
+                    <li>Very dissatisfied
+                        <input type="radio" name="radiob">
+                    </li>
+                </ul>
+            </li> <br>
+            <li class="quetions">Further comments:
+                <textarea id="" cols="30" rows="10"></textarea>
+            </li> <br>
+            <li class="quetions"> Bio photo:
+                <input type="file">
+                <input type="submit" , value="Choose...">
+            </li><br>
+            <li class="quetions">Location visited:
+                <select>
+                    <option value="Select location">Select location</option>
+                </select>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <input type="submit" value="Submit">
+            </li>
+        </ul>
+
+    </form>
+
+</body>
