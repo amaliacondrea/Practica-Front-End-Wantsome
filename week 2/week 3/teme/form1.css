@@ -1,0 +1,28 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+    outline:none;
+}
+body{
+    background: url('https://www.clearpointstrategy.com/wp-content/uploads/2020/07/The-Blue-Ocean-Strategy-Summary-With-3-Examples-resized-653-367.jpg') no-repeat top center ;
+    background-size: cover;
+}
+form{
+    max-width: 550px;
+    margin: 50;
+    margin-top: 150px;
+    padding :100px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px; 
+}
+input:hover{
+    border-color: royalblue;
+    font-size: 15px;
+    
+}
+label{
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: bold;
+}
+

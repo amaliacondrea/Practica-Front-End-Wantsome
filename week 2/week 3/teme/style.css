@@ -1,0 +1,57 @@
+li:nth-child(2n){
+    color: green;
+}
+li:nth-child(3){
+    background-color: lightblue;
+}
+li:first-child{
+    border-top: solid 1px green;
+}
+li:last-child{
+    border-bottom: dotted 5px blue;
+}
+li:nth-child(3) a{
+    color: red;
+}
+li:nth-child(5) a{
+    color: red;
+}
+li:nth-child(5) a:hover{
+    color: gray;
+}
+li:nth-child(3){
+    list-style-type: none;
+}
+
+li:nth-child(5){
+    list-style-type: none;
+}
+
+input[type="text"]:focus{
+    background-color:lightgrey;
+}
+input[placeholder="first name"]{
+    color: green;
+}
+input[placeholder="last name"]{
+    color:blue;
+    
+}
+input[type="password"]{
+     -webkit-text-security:circle;  
+}
+
+input[type="email"]::selection{
+background-color: yellow;
+color:pink;
+}
+input[type="submit"]:hover{
+color: red;
+}
+
+
+
+
+    
+
+ 
