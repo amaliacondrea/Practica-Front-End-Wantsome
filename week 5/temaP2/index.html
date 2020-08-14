@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tema 5 punctul 2</title>
+    <meta charset="UTF-8">
+
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .box {
+            padding: 20px;
+            color: white;
+            text-align: left;
+        }
+
+        .left-top {
+            background-color: rgb(73, 219, 183);
+            grid-area: left-top;
+
+        }
+
+        .left-middle {
+            grid-area: left-middle;
+            background-color: rgb(241, 229, 48);
+            color: black;
+        }
+
+        .center {
+            grid-area: center-area;
+            background-color: rgb(54, 102, 192);
+        }
+
+        img {
+            width: 640px;
+            height: 480px;
+            content: url("https://www.simplycoatings.co.uk/ekmps/shops/simplycoatings2/images/axalta-ral-7001-silver-grey-polyester-80-gloss-powder-coating-20kg-box--1653-p.jpg");
+        }
+
+        .right {
+            grid-area: right-area;
+            background-color: rgb(106, 233, 127);
+
+        }
+
+        .left-bottom {
+            grid-area: left-bottom;
+            background-color: rgb(252, 87, 101);
+        }
+
+        .container {
+            margin: 80px 80px;
+            display: grid;
+            grid-gap: 15px;
+            /* width: 100%;
+            height: 100%; */
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas:
+                "left-top center-area right-area"
+                "left-middle center-area right-area"
+                "left-bottom left-bottom right-area";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box left-top">
+            <h2>Vertical...</h2>
+            <p>Top tile</p>
+        </div>
+        <div class="box left-middle">
+            <h2>...tiles</h2>
+            <p>Bottom tile</p>
+        </div>
+        <div class="box center">
+            <h2>Middle tiles</h2>
+            <p>With an image</p><br>
+            <img>
+        </div>
+        <div class="box right">
+            <h2>Tall tiles</h2>
+            <p>With even more content</p><br>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet varius odio ac dapibus. Duis
+                euismod ullamcorper massa, in fermentum libero blandit sit amet. Vivamus laoreet dui vel tincidunt
+                placerat. Vestibulum pulvinar dictum feugiat. Integer sed velit vel nunc facilisis venenatis quis vel
+                arcu. Nulla ex nisl, pharetra ac neque nec, posuere efficitur orci. Nam sed nisl et lectus dapibus
+                vehicula ut a nibh. Vivamus ullamcorper ex ante, a ornare lectus interdum vel. Aenean pulvinar semper
+                urna, a tincidunt augue iaculis ac. Proin ac purus vel nunc finibus dignissim. Vestibulum at tristique
+                enim, quis laoreet felis. Ut eu eros tristique, blandit tortor id, ornare orci. Pellentesque eget
+                volutpat nulla. Fusce volutpat vitae lorem eu venenatis. Morbi consequat lectus vitae lorem viverra
+                rhoncus. <br> <br>
+
+                Integer mattis nulla at ligula varius, ac elementum est cursus. Praesent imperdiet vel felis in
+                eleifend. Sed a sagittis velit. Proin scelerisque sem a ipsum porta cursus. Maecenas malesuada est vel
+                volutpat ultricies. Morbi ut lectus ex. Cras dignissim lorem magna, vel sagittis nisl congue at. Nam non
+                quam luctus, pharetra leo rhoncus, posuere lectus. Nam finibus scelerisque est, in molestie tortor
+                tincidunt eu. Quisque magna dui, facilisis sit amet massa eget, pulvinar lobortis est. <br> <br>
+
+                Sed ultrices ultrices dolor at vehicula. Aliquam auctor, risus eget auctor viverra, mi libero venenatis
+                elit, at convallis nibh elit nec metus. Fusce faucibus mi lectus, eget maximus tortor dictum venenatis.
+                Integer mauris lorem, imperdiet at eros ut, dictum malesuada leo. Nunc sit amet eros quis nisi rhoncus
+                scelerisque nec ac leo. Sed dignissim augue eu mauris dictum cursus. Aliquam est felis, varius eu
+                dignissim vitae, sagittis eget sem. Suspendisse vulputate id tortor et feugiat. Suspendisse sodales
+                neque porttitor rhoncus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+
+
+        </div>
+        <div class=" box left-bottom">
+            <h2>Wide tile</h2>
+            <p>Aligned with the right tile</p> <br>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet varius odio ac dapibus. Duis
+                euismod ullamcorper massa, in fermentum libero blandit sit amet. Vivamus laoreet dui vel tincidunt
+                placerat</p>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
