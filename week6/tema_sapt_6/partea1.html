@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tema 6</title>
+    <meta charset="UTF-8">
+    <script>
+
+        //Ex1: Creati un array care sa aiba length-ul 5. Demonstrati ca length-ul este 5.
+
+        var arr = ["a", "b", "c", "d", "e"];
+        console.log(arr.length);
+
+        //Ex4: Folositi o metoda pe arrayuri avand in vedere variabila de mai jos, sa obtinem rezultatul "one and two and three and four and five" 
+        // fara sa modificati variabila initiala
+        var numbers = ['one', 'two', 'three', 'four', 'five'];
+        var modifiedNr = numbers.join(" and ");
+        console.log(modifiedNr);
+
+        //Ex5: Adaugati 2 elemente noi in arrayul de mai jos
+        var cars = ['Tesla', 'Dacia'];
+        cars.push("Honda", "Mini Cooper");
+        console.log(cars);
+
+        //Ex6: Avand rezultatul de la exercitiul anterior, scoateti ultimul element intrat.
+        cars.pop();
+        console.log(cars);
+
+        //Ex7: Avand rezultatul exercitiului anterior, adaugati elementul 'Dodge' la inceputul arrayului
+        cars.unshift("Dodge");
+        console.log(cars);
+
+        //Ex8: Avand rezultatul exercitiului anterior, inversati ordinea elementelor din array
+        cars.reverse();
+        console.log(cars);
+
+        //Ex9: Avand in vedere rezultatul anterior Folositi o metoda pe arrayuri care sa inlocuiasca incepand de la elementul 'Tesla' si sa adauge alte 2 elemente noi - splice();
+
+        cars.splice(0, 2, "Toyota", "Smart");
+        console.log(cars);
+
+        //Ex10: Sortati urmatorul array de la mic la mare si de la mare la mic 
+        var arrayNumbers = [1, 5, 20, 30, 100];
+        arrayNumbers.sort(function (a, b) {
+            return a - b;
+        });
+        console.log(arrayNumbers);
+        arrayNumbers.sort(function (a, b) {
+            return b - a;
+        });
+        console.log(arrayNumbers);
+
+        //Ex11 : Aveti urmatorul array - folositi o functie care sa ia arrayul ca argument si sa-l returneze ordonat
+        var fruitsArray = ["Apple", "Lemon", "Banana", "Orange", "Bere", "Mici"]
+        function myFruitsArr(fruitsArray) {
+            return fruitsArray.sort();
+        }
+        console.log(myFruitsArr(fruitsArray));
+
+        //-------------------------------------------------------------------------------------------//
+
+        //Ex4 
+        // Creati un obiect cu cateva proprietati
+        // "Copiati" obiectul printr-o metoda specifica obiectelor(vedeti pe google) si stocatil intr-o alta variabila
+        // Pe obiectul nou adaugam 2 noi proprietati
+        // Avem obiectul de mai jos, folosind o metoda pe obiecte faceti "merge" intre cele 2 obiecte si salvati-l sub un nume nou.
+        myHouse = {
+            rooms: 3,
+            zone: "Bucium",
+            animals: 1
+        };
+
+        var product = {
+            name: "MacBook",
+            price: 5000,
+            releaseDate: 2019,
+        };
+
+        var productCopy = Object.assign({}, product);
+        console.log(productCopy);
+
+
+        productCopy.screenSize = "15-inch";
+        productCopy.features = ["VoiceOver", "Increase Contrast", "Reduce Motion", "Dictation"];
+        console.log(productCopy);
+
+        var mergedObj = Object.assign({}, myHouse, productCopy);
+        console.log(mergedObj);
+
+
+        // Ex5 
+        // Creati un obiect care sa contina un alt obiect in interorul lui cu 2 proprietati
+        // Accesati proprietatile acelui obiect si stocati key-le intr-o variabila separata.
+        // transformati arrayul intr-un singur string care sa rezulte "proprietatea1 si proprietatea2 apartin obiectului x"
+
+        var person = {
+            name: "Costica",
+            age: 35,
+            CI: {
+                CNP: 189253648943,
+                seria: "XT 937659",
+            }
+        };
+        console.log(person.name);
+
+        console.log(person.CI.CNP);
+
+        var personKeys = console.log(Object.keys(person).join());
+
+        var str = person.name + "," + person.age + " si " + person.CI + "apartin obiectului `person`";
+
+        console.log(str);
+
+        //Ex6
+        // Avem obiectul : 
+        myObject = {
+            name: "John",
+            surname: "Applegate",
+        }
+        //Adaugati o metoda care sa sorteze cele 2 valori ale numelui.
+
+        console.log(Object.values(myObject).sort());
+
+        //Ex7 
+        //Faceti o functie constructor
+        // Cu functia constructor creati 3 obiecte cu valori diferite
+        // Pentru toate valorile din acele obiecte transformatile in litere mari.
+
+
+        function Person(hairColor, age, height) {
+            this.hairColor = hairColor;
+            this.age = age;
+            this.height = height;
+        }
+
+        var person1 = new Person("brown", 24, 1.64);
+        var person2 = new Person("red", 38, 1.75);
+        var person3 = new Person("blonde", 19, 1.70);
+        var p1ToUpperCase = Object.values(person1).join().toUpperCase();
+        var p2ToUpperCase = Object.values(person2).join().toUpperCase();
+        var p3ToUpperCase = Object.values(person3).join().toUpperCase();
+
+        console.log(p1ToUpperCase,p2ToUpperCase,p3ToUpperCase);
+
+    </script>
+</head>
+
+<body>
+    <h2>JS</h2>
+</body>
+
+</html>

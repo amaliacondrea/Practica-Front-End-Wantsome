@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tema 6 partea 2</title>
+    <meta charset="UTF-8">
+    <script>
+
+        //         3. Scrieti o functie numita pluralizeWord care:
+        // - accepta doua argumente: un substantiv in engleza si un numar
+        // - returneaza numarul si forma de plural corespunzatoare substantivului, precum: “5 cats”, “1 dog”
+        // - adaugati cateva cazuri particulare pentru cuvinte precum “sheep” sau “geese”
+
+        // [ca sa nu fac o insiruire  a substantivelor pt cazurile particulare, (nu am idee cum as putea sa le scriu in mod abstract) - am ales totusi, sa las  forma cea mai simpla.
+
+        function pluralizeWord(subs, nr) {
+            if (nr === 1) {
+                return nr + " " + subs;
+            } else {
+                return nr + " " + subs + "s";
+            }
+        }
+
+        console.log(pluralizeWord("friend", 8));
+
+        //         Scrieti o functie care accepta ca argument venitul anual al unui angajat in dolari (ex: $30,000) si calculeaza taxa corespunzatoare considerand urmatoarele criterii:
+        // - daca angajatul castiga anual o suma mai mica de $30,000, taxa este 0%
+        // - daca venitul anual se situeaza intre $50,000 - $99,999, taxa calculata trebuie sa fie 35%
+        // - pentru venit mai mare de $100,000, taxa se calculeaza ca procentaj de 40%
+        // Returnati un text care sa aiba un format asemanator: “Pentru un venit anual de x, aveti de platit taxe in valoare de y”
+
+        function salaryTax(salary) {
+
+            var salaryInUsd = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(salary);
+            if (salary < 30000) {
+                console.log("pentru un venit anual de  " + salaryInUsd + ", aveti de platit 0% taxe");
+            } else if (salary <= 50.000 && salary >= 99.999) {
+                console.log("Pentru un venit anual de " + salaryInUsd + ", aveti de platit taxe in valoare de:  $" + salary * 35 / 100 + ".");
+            } else {
+                console.log("Pentru un venit anual de " + salaryInUsd + ", aveti de platit taxe in valoare de: $" + salary * 40 / 100 + ".");
+            }
+
+        }
+        console.log(salaryTax(50000));
+
+
+        //         5. Scrieti in doua variante o functie care accepta ca argument o valoare numerica pentru un parametru numit points si afiseaza:
+        //   - AA if points is greater than 90
+        // - AB if points is greater than 80
+        // - BB if points is greater than 70
+        // - BC if points is greater than 60
+        // - CC if points is greater than 50
+        // - CD if points is greater than 40
+        // - DD if points is greater than 30
+        // - FF if points is less than or equal to 30
+
+        function displayGrades(points) {
+            switch (true) {
+                case points > 90:
+                    console.log('AA');
+
+                    break;
+                case (points > 80 && points <= 90): {
+                    console.log('AB');
+                }
+                    break;
+                case (points > 70 && points <= 80): {
+                    console.log('BB');
+                }
+                    break;
+                case (points > 60 && points <= 70): {
+                    console.log('BC');
+                }
+                    break;
+                case (points > 50 && points <= 60): {
+                    console.log('CC');
+                }
+                    break;
+                case (points > 40 && points <= 50): {
+                    console.log('CD');
+                }
+                    break;
+                case (points > 30 && points <= 40): {
+                    console.log('DD');
+                }
+                    break;
+                default: {
+                    console.log('FF');
+                }
+                    break;
+            }
+
+        }
+        displayGrades(75);
+
+        function grades(points) {
+            if (points > 90) {
+                console.log('AA');
+            } else if (points > 80 && points <= 90) {
+                console.log('AB');
+            } else if (points > 70 && points <= 80) {
+                console.log('BB');
+            } else if (points > 60 && points <= 70) {
+                console.log('BC');
+            } else if (points > 50 && points <= 60) {
+                console.log('CC');
+            } else if (points > 40 && points <= 50) {
+                console.log('CD');
+            } else if (points > 30 && points <= 40) {
+                console.log('DD');
+            } else {
+                console.log('FF');
+            }
+        }
+
+        grades(75);
+
+        //    6. Scrieti o functie care testeaza daca o anumita data introdusa este in weekend:
+        // Test Data :
+        // console.log(is_weekend('Nov 15, 2014')); console.log(is_weekend('Nov 16, 2014')); console.log(is_weekend('Nov 17, 2014'));
+        // Output : "weekend"
+        // "weekend" undefined
+
+        function is_weekend(date) {
+
+            var day = new Date(date);
+
+            if (day.getDay() == 6 || day.getDay() == 0) {
+                return "weekend";
+            }
+        }
+        console.log(is_weekend('Oct 14, 1989'));
+
+
+
+    </script>
+</head>
+
+<body>
+    <h2>JS</h2>
+</body>
+
+</html>
