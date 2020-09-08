@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tema 6 partea 3</title>
+    <meta charset="UTF-8">
+<script>
+// for in
+var userDetails= {
+  name: "Daniel",
+  age: 22,
+  sex:"M"
+};
+
+var userInfo = "detaliile utilizatorului sunt: ";
+
+for(var key in userDetails){
+    userInfo+= userDetails[key]+ ",";   
+    
+}
+console.log (userInfo);
+
+//while
+
+//----infinit loop----//
+// var i=0;
+// while(i<10){
+//     console.log(i);
+//     i++;
+// }
+
+var numbersList =[7,9,-2,1,-13,40,24,15];
+for (var i=0; i<numbersList.length; i++){
+console.log(numbersList[i]);
+if(numbersList[i]<0){
+    break;
+}
+console.log(numbersList[i]);
+}
+
+var numbersList =[7,9,-2,1,-13,40,24,15];
+for (var i=0; i<numbersList.length; i++){
+console.log(numbersList[i]);
+if(numbersList[i]<0){
+    continue; //ignora instructiune si ia urmatoare valoare si continua bucla
+}
+console.log(numbersList[i]);
+}
+
+for(var i=0; i<100; i++){
+    //verificam daca numarul este par
+    if(i%2===0){
+        continue;
+    }
+    //daca codul ajunge in acest punct, inseamna ca i este impar si il afisez
+    console.log (i + "este numar impar");
+}
+
+//ex 1
+function countIndex(n){
+    for(nr=0;nr<=n;nr++){
+        console.log( "sunt la iteratia nr"+ nr);
+    }
+
+}
+function countIndexV2(n){
+    var nr=0;
+    while(nr<=n){
+        nr++;
+        
+        console.log( "sunt la iteratia nr"+ nr);
+    }
+}
+
+countIndexV2(3);
+ //sunt la iteratia numarul 0
+//sunt la iteratia numarul 0
+//sunt la iteratia numarul 0
+//sunt la iteratia numarul 0
+
+
+//ex2
+
+function goOverArray(arr){
+for(var i=0; i<arr.length; i++){
+    console.log(arr[i]);
+}
+}
+
+function goOverArray2(arr){
+    var i=0;
+    while (i<arr.length){
+        i++;
+        console.log(arr[i]);
+    }
+}
+
+var myArray=[1,2,3,4,5,6];
+
+goOverArray(myArray);
+goOverArray2(myArray);
+
+function goOverObject(arr){
+for(var i=0; i<arr.length; i++){
+    console.log(arr[i]);
+}
+}
+
+//0 100 200, 300, 400......
+for(var i=0; i<=1000; i=i+100){
+console.log(i);
+}
+
+//1,2,4,8,16,32,64,128
+var i=0;
+while(i<=7){
+    i+=1
+    console.log(Math.pow(2,i));
+}
+var myArray=[1,2,3,4,5,6];
+
+//9 8 7 6 5 4 3 2 1 0
+for(var i=9; i>=0; i--){
+    console.log(i);
+}
+//0 2 4 6 8 10
+
+for(var i=0; i<=10; i++){
+if(i%2===1){
+    continue;
+}
+console.log(i);
+}
+console.log('instr');
+
+
+
+/////functie stream
+function stream(condition, callback){
+    while(condition()===true){
+        callback();
+    }
+}
+//exemplu 1
+var conditionalFn= function(){return false;};
+var actionFn= function(){
+    console.log('vreau sa ies la tabla!');
+
+};
+stream(conditionalFn,actionFn);
+//exemplu 2
+var counter = 10;
+var conditionalFn= function(){
+    counter--;
+    returncounter>=0;
+};
+
+    </script>
+    </head>
+    <body>
+        <h2>sd</h2>
+    </body>
+    </html>
