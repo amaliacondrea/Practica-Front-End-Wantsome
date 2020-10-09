@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Despre mine</title>
+    <style>
+        .listitem {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Despre mine</h1>
+
+    <ul>
+        <li>Nume: <span id="name"></span>
+        <li>Bautura Favorita: <span id="fav-drink"></span>
+        <li>Locul nasterii: <span id="born-place"></span>
+    </ul>
+    <script>
+        document.body.style.fontFamily = "Arial, sans-serif"
+
+        const ul = document.getElementsByTagName('ul')[0];
+        const name = ul.firstElementChild.textContent = 'Amalia Condrea'
+        const favDrink = ul.firstElementChild.nextElementSibling.textContent = "Cola zero";
+        const bornPlace = ul.firstElementChild.nextElementSibling.nextElementSibling.textContent = "Dorohoi";
+
+
+        ul.classList.add("listitem");
+        const image = document.createElement('img');
+        image.setAttribute('src', 'https://d1v1e13ebw3o15.cloudfront.net/data/41281/pool_and_spa_master/..jpg');
+
+        document.body.appendChild(image);
+    </script>
+</body>
+
+</html>

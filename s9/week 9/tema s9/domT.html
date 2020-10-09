@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Master the DOM!</title>
+  
+</head>
+<body>
+  <h1>Master the DOM!</h1>
+  <div id="test">I'm an ID</div>
+  <div class="test">I'm a class</div>
+  <div class="test">I'm another class</div>
+  <section>I'm a tag</section>
+  <section>I'm another tag</section>
+  <div id="test-query">Use a query selector</div>
+  <div class="test-query-all">Use query selector ALL</div>
+  <div class="test-query-all">Use query selector ALL</div>
+  <script>
+
+const elem1= document.getElementById('test');
+elem1.style.backgroundColor='red';
+
+const elem2and3 = document.getElementsByClassName('test');
+elem2and3[0].style.backgroundColor='orange';
+elem2and3[1].style.backgroundColor='yellow';
+
+const elem4= document.getElementsByTagName('section');
+elem4[0].style.background='green';
+elem4[1].style.background='blue';
+
+const elem5= document.getElementById('test-query');
+elem5.style.background='indigo';
+
+const elem6= document.querySelectorAll('.test-query-all');
+elem6[0].style.backgroundColor='violet'
+elem6[1].style.backgroundColor='pink'
+
+const h1 = document.querySelector('h1')
+h1.style.backgroundColor='lightgrey'
+
+document.body.style.backgroundColor= 'azure';
+
+  </script>
+</body>
+</html>
