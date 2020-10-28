@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partea 1</title>
+</head>
+
+<body>
+    <script>
+        // Creati doua functii care folosesc Promises pentru a putea face o inlantuire (Promise chain). 
+        // Prima functie, capitalizeWords(), va primi ca si argument un array de cuvinte si va aplica o operatiune de capitalize pe acestea. 
+        // A doua functie, sortWords(), va primi ca si argument rezultatul primului Promise si va sorta cuvintele in ordine alfabetica. 
+        // In cazul in care array-ul initial contine un element cu o valoare diferita de tipul string, se va face reject.
+
+
+
+        const capitalizeWords = array => {
+            let promise = new Promise(function (resolve, reject) {
+                let newArray = array.filter(s => typeof s !== "string");
+                if (newArray.length === 0) {
+                    resolve(array.map(s => s.charAt(0).toUpperCase() + s.slice(1)));
+                } else {
+                    reject("Array-ul NU contine doar string-uri!!!");
+                }
+            })
+            return promise;
+        }
+        const sortWords = array => {
+            let promise = new Promise(function (resolve, reject) {
+                resolve(array.sort());
+            })
+            return promise;
+        }
+
+        capitalizeWords(["mere", "portocala", "kiwi", "ananas"])
+            .then(result => sortWords(result))
+            .then(result => console.log(result))
+            .catch(error => console.log(error));
+
+
+    </script>
+
+</body>
+
+</html>
